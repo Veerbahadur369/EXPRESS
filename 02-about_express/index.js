@@ -1,14 +1,7 @@
 const express =require("express")
 
-const app= express()
 
-app.get("",(req,res)=>{
-    res.send("<h1>hell express</h1>")
-})
- 
-app.get("",(req,res)=>{
-    res.send("<h2>This is about page</h2>")
-})
+console.log("this is git checkout")
 
 app.listen(4000,()=>{
 
