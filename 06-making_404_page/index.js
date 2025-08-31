@@ -20,11 +20,11 @@ const app= express()
         app.use((req,res)=>{
 
           res.status(404).sendFile(path+"/error.html")
-        }) 
+        })  
 
 app.listen(4000,()=>{
     
-console.log("Port listening at 4000")
+console.log("server running on 4000")
 
 })
     
