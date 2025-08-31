@@ -1,0 +1,23 @@
+h1{
+    color: greenyellow;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color: blueviolet;
+}
+button{
+    padding: 5px 20px;
+    font-size: larger;
+    border-radius: .5rem;
+    background: black;
+    color: white;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:30px
+}
