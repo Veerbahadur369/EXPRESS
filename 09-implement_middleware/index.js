@@ -1,7 +1,9 @@
 import express from "express"
 
 const app = express()
+        //& These are global  middleware it mean we need to check at every route 
 
+//~ This below middlware is used for age checking        
 // function ageCheker(req,res,next){
 //     if(req.query.age>=18){
 //         next()
@@ -10,6 +12,9 @@ const app = express()
 //         res.send("You are not aligeble")
 //     }
 // }
+
+
+// ~ This below middlware is used for block particular ip of user
 function ipchecker(req,res,next){
 const ip = req.socket.remoteAddress
 console.log(ip)
