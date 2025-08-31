@@ -1,16 +1,28 @@
-const express =require("express")
-
+import express from 'express' 
+import path from 'path'
 const app= express()
 
-app.get("",(req,res)=>{
-    res.send("<h1>hell express</h1>")
-})
+
  
-app.get("",(req,res)=>{
-    res.send("<h2>This is about page</h2>")
-})
+        app.get('/',(rep,res)=>{
+            const abpath=path.resolve('./pages/home.html')
+            res.sendFile(abpath)
+            console.log("This is absolute  "+abpath)
+        })    
+          app.get('/about',(rep,res)=>{
+            const abpath=path.resolve('./pages/About.html')
+            res.sendFile(abpath)
+            console.log("This is absolute path of about :- "+abpath)
+        })                    
+          app.get('/contact',(rep,res)=>{
+            const abpath=path.resolve('./pages/contact.html')
+            res.sendFile(abpath)
+            console.log("This is absolute path of contact "+abpath)
+        })    
 
 app.listen(4000,()=>{
+    
+console.log("Port listening at 4000")
 
-    console.log("Port listening at 4000")
 })
+    

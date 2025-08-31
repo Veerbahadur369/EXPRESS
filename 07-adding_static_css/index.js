@@ -1,32 +1,34 @@
-import express from 'express' 
-import filePath from "./module/path.js"
-const app= express()
+import express from 'express';
+import filePath from './module/path.js';
+import path from 'path';
 
+const app = express();
+const imgPath = path.resolve('./images');
+console.log('Image path:', imgPath);
 
-    const cssPath =filePath 
-    console.log(cssPath)
-    app.use(express.static(cssPath))
-        app.get('/',(rep,res)=>{
-            
-            res.sendFile(filePath+"/home.html")
-            console.log("This is absolute  "+filePath)
-        })    
-          app.get('/about',(rep,res)=>{
-            res.sendFile(filePath+"/about.html")
-            console.log("This is absolute filePath of about :- "+filePath)
-        })                    
-          app.get('/contact',(rep,res)=>{
-            res.sendFile(filePath+"/contact.html")
-            console.log("This is absolute filePath of contact "+filePath)
-        })   
-        app.use((req,res)=>{
+// Serve static files 
+app.use(express.static(filePath)); // CSS, JS, etc.
+app.use(express.static(imgPath));  // Images
 
-          res.status(404).sendFile(filePath+"/error.html")
-        }) 
+// Routes
+app.get('/', (req, res) => {
+  res.sendFile(path.join(filePath, 'home.html'));
+});
 
-app.listen(4000,()=>{
-    
-console.log("Port listening at 4000")
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(filePath, 'about.html'));
+});
 
-})
-    
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(filePath, 'contact.html'));
+});
+
+// 404 handler
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(filePath, 'error.html'));
+});
+
+// Start server
+app.listen(4000, () => {
+  console.log('Server listening on http://localhost:4000');
+});
