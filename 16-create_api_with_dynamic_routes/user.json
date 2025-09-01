@@ -1,0 +1,33 @@
+[
+    {
+      "id":1,
+      "name":"Veer" ,
+     "age":22,
+     "course":"MERN"
+
+    }, {
+      "id":2,
+      "name":"suraj" ,
+     "age":24,
+     "course":"MERN"
+
+    }, {
+      "id":3,
+      "name":"sonu" ,
+     "age":24,
+     "course":"DATA ANALYST"
+
+    }, {
+      "id":4,
+      "name":"MOHIT" ,
+     "age":23,
+     "course":"MERN"
+
+    }, {
+      "id":5,
+      "name":"vivek" ,
+     "age":22,
+     "course":"MERN"
+
+    } 
+]
