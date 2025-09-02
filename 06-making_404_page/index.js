@@ -19,7 +19,7 @@ const app= express()
         })   
         app.use((req,res)=>{
 
-          res.status(404).sendFile(path+"/error.html")
+          res.status(404).sendFile(path+"/error.html")   // ! This is used to handleing invalid url path
         })  
 
 app.listen(4000,()=>{
