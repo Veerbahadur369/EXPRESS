@@ -52,5 +52,6 @@ async  function dummyConnection(){
     let result =await collectionName.find().skip(100).toArray()
     console.log(result)
   }
-  
+  console.log('hello')
+
   dummyConnection()
