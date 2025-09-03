@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+      <table border="1">
+        <tr>
+            <td><h1>Title</h1></td>
+            <td><h1>price</h1></td>
+            <td><h1>Stock</h1></td>
+            <td><h1>Category</h1></td>
+            <td><h1>Return Policy</h1></td>
+            <td><h1>Weight</h1></td>
+          
+            
+        </tr>
+        <% result.map( (item) =>{  %>
+          <tr>
+              <td><%=item.title %></td>
+              <td><%=item.price %></td>
+              <td><%=item.stock %></td>
+              <td><%=item.category %></td>
+              <td><%=item.returnPolicy %></td>
+              <td><%=item.weight %></td>
+              </tr>
+            <% }) %>
+      </table>
+ </body>
+ </html>
